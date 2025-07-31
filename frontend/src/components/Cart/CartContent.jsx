@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { RiDeleteBin4Line } from "react-icons/ri";
 const CartContent = () => {
   const cartproducts = [
     {
@@ -9,7 +9,7 @@ const CartContent = () => {
       color: "black",
       quantity: 1,
       price: 100,
-      image: "https://picsum.photos/200/random=1"
+      image: "https://picsum.photos/200/?random=2"
     },
     {
       productid: 2,
@@ -18,7 +18,7 @@ const CartContent = () => {
       color: "blue",
       quantity: 1,
       price: 120,
-      image: "https://picsum.photos/200?random=2"
+      image: "https://picsum.photos/200?random=3"
     },
   ]
   return (
@@ -28,16 +28,19 @@ const CartContent = () => {
           className='flex items-start justify-between py-4 border-b'
         >
           <div className='flex items-start'>
-            <img src={item.image} alt="image" className='h-[30px] w-[0px]' />
+            <img src={item.image} alt="image" className='h-[50px] w-[60px] mr-2 rounded-md object-cover' />
+            <div>
+              <h3 className='text-md text-black'>{item.name}</h3>
+              <p className='text-sm text-gray-600'>size: {item.size} | color: {item.color}</p>
+            </div>
           </div>
           <div>
-            <p className='text-sm text-gray-600'>{item.name}</p>
-          </div>
-          <div>
-            <p className='text-sm text-gray-600'>size: {item.size}</p>
-          </div>
-          <div>
-            <p className='text-sm text-gray-600'>price: {item.price}</p>
+            <p>
+              $ {item.price.toLocaleString()}
+            </p>
+            <button>
+              < RiDeleteBin4Line className='h-6 w-5 text-red-600' />
+            </button>
           </div>
         </div>
       ))}
