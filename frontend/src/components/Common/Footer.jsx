@@ -60,7 +60,7 @@ const Footer = () => {
               href="https://www.facebook.com"
               target='_blank'
               rel='noopener noreferrer'
-              className='hover:text-gray-600'
+              className='hover:text-blue-700 transition-colors duration-200'
             >
               <TbBrandMeta className='h-5 w-5' />
             </a>
@@ -68,9 +68,8 @@ const Footer = () => {
               href="https://www.facebook.com"
               target='_blank'
               rel='noopener noreferrer'
-              className='hover:text-gray-600'
             >
-              <AiOutlineLinkedin className='h-5 w-5' />
+              <AiOutlineLinkedin className='h-5 w-5 hover:text-blue-700 transition-colors duration-200' />
             </a>
             <a
               href="https://www.facebook.com"
